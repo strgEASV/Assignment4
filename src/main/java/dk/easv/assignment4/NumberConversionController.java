@@ -16,10 +16,10 @@ public class NumberConversionController implements Initializable {
     private NumberConversionModel ncmodel = new NumberConversionModel();
 
     @FXML
-    private Label label;          // Label pro pozdrav
+    private Label label;
 
     @FXML
-    private TextField txtNumberInput;  // TextField pro vstup kilometrů
+    private TextField txtNumberInput;
 
     @FXML
     private Label lblResult;
@@ -44,6 +44,17 @@ public class NumberConversionController implements Initializable {
             double kmValue = Double.parseDouble(txtNumberInput.getText());
             double miles = ncmodel.getMilesFromKilometers(kmValue);
             lblResult.setText(String.format("%.2f miles", miles));
+        } catch (NumberFormatException e) {
+            lblResult.setText("Please enter a valid number!");
+        }
+    }
+
+    @FXML
+    private void handleButtonAction2(ActionEvent event) {
+        try {
+            double milesValue = Double.parseDouble(txtNumberInput.getText());
+            double km = ncmodel.getKilometersFromMiles(milesValue);
+            lblResult.setText(String.format("%.2f km", km));
         } catch (NumberFormatException e) {
             lblResult.setText("Please enter a valid number!");
         }

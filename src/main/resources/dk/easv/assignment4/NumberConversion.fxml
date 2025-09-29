@@ -22,7 +22,7 @@
             </font>
         </Label>
 
-        <Label text="Kilometers to Miles Converter" textFill="WHITE">
+        <Label text="Kilometrs &amp; Miles Converter" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
@@ -34,20 +34,24 @@
             </font>
         </TextField>
 
-        <Button fx:id="btnCalculate" onAction="#handleButtonAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 30;" text="Calculate!">
+        <Button fx:id="btnCalculate" onAction="#handleButtonAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 30;" text="Calculate KM to MIL">
             <font>
                 <Font size="16.0" />
             </font>
         </Button>
+      <Button fx:id="btnCalcMilesToKm" layoutX="230.0" layoutY="254.0" onAction="#handleButtonAction2" style="-fx-background-color: #4FA; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 30;" text="Calculate MIL to KM">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
 
-        <!-- Výsledek převodu -->
         <Label text="Result:" textFill="WHITE">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
 
-        <Label fx:id="lblResult" maxWidth="400.0" prefHeight="28.0" prefWidth="220.0" text="(result will appear here)" textFill="WHITE" wrapText="true">
+        <Label fx:id="lblResult" maxWidth="400.0" prefHeight="28.0" prefWidth="220.0" text=" " textFill="WHITE" wrapText="true">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
